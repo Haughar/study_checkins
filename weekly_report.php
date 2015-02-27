@@ -5,7 +5,7 @@
 	$stmt;
 	$mysqli_connection;
 	if (!empty($_GET['week'])) {
-		$mysqli_connection = new MySQLi($sever, $user, $pass, $table, $port);
+		$mysqli_connection = new MySQLi($server, $user, $pass, $table, $port);
 		$week = $_GET['week'];
 		if (mysqli_connect_errno() == 0) { ?>
 		<div>
