@@ -33,6 +33,14 @@
 			</div>
 			<div class="navbar navbar-custom">
 				<div class="container-fluid">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav">
 							<li><a href="record.php">Recording Page</a></li>
@@ -55,4 +63,19 @@
 	</html>
 <?php
 	}
+
+function week_dropdown($cols) { ?>
+	<div class="col-lg-<?php echo $cols; ?> col-md-<?php echo $cols; ?>">
+		<select class="form-control" name="week" form="form_submit">
+			<option value="week1">Week 1</option>
+			<option value="week2">Week 2</option>
+			<option value="week3">Week 3</option>
+			<option value="week4">Week 4</option>
+			<option value="week5">Week 5</option>
+			<option value="week6">Week 6</option>
+			<option value="week7">Week 7</option>
+			<option value="week8">Week 8</option>
+		</select>
+	</div>
+<?php }
 ?>
