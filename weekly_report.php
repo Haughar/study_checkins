@@ -36,16 +36,7 @@
 ?>
 	<div>
 		<h1>Choose a Week:</h1>
-		<select name="week" form="form_submit">
-			<option value="week1">Week 1</option>
-			<option value="week2">Week 2</option>
-			<option value="week3">Week 3</option>
-			<option value="week4">week 4</option>
-			<option value="week5">Week 5</option>
-			<option value="week6">Week 6</option>
-			<option value="week7">Week 7</option>
-			<option value="week8">Week 8<option>
-		</select>
+		<?php week_dropdown("2"); ?>
 		<form id="form_submit" action="weekly_report.php" method="get">
 			<input type="submit" value="Go" />
 		</form>
