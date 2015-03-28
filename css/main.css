@@ -26,6 +26,16 @@ img {
 .navbar-custom {
     background-color: #E5B8AD;
 	border-color: #C99E93;
+	border-radius: 8px;
+}
+
+.navbar-toggle.collapsed {
+	background-color: #C99E93;
+	border: 1px solid #C99E93;
+}
+
+.navbar-toggle.collapsed > .icon-bar {
+	background-color: #E5B8AD;
 }
 
 .navbar-custom .navbar-nav > li > a {
