@@ -1,0 +1,29 @@
+AuthType UWNetId
+
+<Files "record.php">
+	require
+</Files>
+
+<Files "edit_checkin.php">
+	require
+</Files>
+
+<Files "add_member.php">
+	require
+</Files>
+
+<Files "remove_member.php">
+	require
+</Files>
+
+<Files "edit_member.php">
+	require
+</Files>
+
+<Files "weekly_report.php">
+	require
+</Files>
+
+<Files "quarterly_repprt.php">
+	require
+</Files>
