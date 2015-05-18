@@ -4,7 +4,7 @@
 
 	$stmt;
 	$mysqli_connection;
-	echo $_POST;
+	?><div><h1>Record Study Hours</h1><?php
 	if (!empty($_POST['name'])) {
 		$mysqli_connection = new MySQLi($server, $user, $pass, $table, $port);
 		if (mysqli_connect_errno() == 0) {
@@ -15,7 +15,6 @@
 				while ($row = $result->fetch_row()) {
         			$prev = $row[0];
     			}
-				echo $prev;
 				$result->close();
 			}
 
@@ -23,14 +22,19 @@
 
 			if ($stmt = $mysqli_connection->prepare("UPDATE " . $quarter . " SET " . $week . " = " . $new_total . " WHERE name = '$name'")) {
 				$stmt->execute();
+				?><div class="row"><?php
+        		if ($stmt->affected_rows == 1) { ?>
+            		<div class="alert alert-success col-lg-4 col-md-6 col-sm-10 col-xs-12" role="alert"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> <?= $name ?> was successfully added to the database.</div><br />
+    			<?php    
+       			} else if (!empty($_POST['name'])) { ?>
+            		<div class="alert alert-danger col-lg-4 col-md-6 col-sm-10 col-xs-12" role="alert"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span> <?= $name ?> was <strong>NOT</strong> successfully added to the database.</div><br />
+    			<?php } ?> </div><?php
 				$stmt->close();
 			}
 		}
 	}
 ?>
 
-		<div>
-			<h1>Record Study Hours</h1>
 			<div id="form-outline" class="form-horizontal form-custom col-xs-12 col-sm-10 col-md-6 col-lg-4">
 				<div class="form-group">
 					<label class="control-label col-xs-4 col-sm-4 col-md-4 col-lg-4" for="record_week">Week: </label>
