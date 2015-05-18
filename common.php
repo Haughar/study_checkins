@@ -67,14 +67,14 @@
 function week_dropdown($cols) { ?>
 	<div class="col-lg-<?php echo $cols; ?> col-md-<?php echo $cols; ?>">
 		<select class="form-control" name="week" form="form_submit">
-			<option value="week1">Week 1</option>
-			<option value="week2">Week 2</option>
-			<option value="week3">Week 3</option>
-			<option value="week4">Week 4</option>
-			<option value="week5">Week 5</option>
-			<option value="week6">Week 6</option>
-			<option value="week7">Week 7</option>
-			<option value="week8">Week 8</option>
+			<option value="week1">Week 2</option>
+			<option value="week2">Week 3</option>
+			<option value="week3">Week 4</option>
+			<option value="week4">Week 5</option>
+			<option value="week5">Week 6</option>
+			<option value="week6">Week 7</option>
+			<option value="week7">Week 8</option>
+			<option value="week8">Week 9</option>
 		</select>
 	</div>
 <?php }

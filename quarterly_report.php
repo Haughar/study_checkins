@@ -15,7 +15,6 @@
 				<th>Name</th>
 				<th>PC</th>
 				<th>Check-ins Required</th>
-				<th>Week 1</th>
 				<th>Week 2</th>
 				<th>Week 3</th>
 				<th>Week 4</th>
@@ -23,6 +22,7 @@
 				<th>Week 6</th>
 				<th>Week 7</th>
 				<th>Week 8</th>
+				<th>Week 9</th>
 			</tr>
 <?php
 			while ($row = $result->fetch_row()) { ?>
